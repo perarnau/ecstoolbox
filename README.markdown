@@ -12,15 +12,19 @@ Here are the various programs it contains :
 
 Source: mpi_coords.c
 
+	mpirun -n N ./mpi-coords
+
 Specific to the Kei Computer MPI implementation.
 Provides the 6D coordinates of each MPI process it is executed on.
 
 ### mpi-exec
 
-	mpi-exec $1
+Source mpi_exec.c
+
+	mpirun -n N ./mpi-exec $1
 
 Fork and Exec $1 in every MPI process, passing `comm_rank` and `comm_size`
-(in MPI_COMM_WORL) as arguments.
+(in MPI_COMM_WORLD) as arguments.
 
 ## Wishlist
 
